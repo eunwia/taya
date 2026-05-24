@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Church</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Offset for fixed navbar */
+        section {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="loading-logo">
+            <div class="loading-bar-container">
+                <div class="loading-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#home">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Church Logo" style="height: 40px; margin-right: 10px;">
+                <span>Tabuelan Bible Baptist</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#service">Services</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <button id="theme-toggle" class="btn btn-theme-toggle" aria-label="Toggle Dark Mode">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Image Lightbox Modal -->
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage">
+    </div>
+
+    <footer class="footer-modern py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 animate-on-scroll">
+                    <div class="footer-brand mb-4">
+                        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="footer-logo-img">
+                        <h4 class="d-inline-block align-middle ms-2 mb-0">Tabuelan Bible Baptist</h4>
+                    </div>
+                    <p class="footer-about">Spreading the light and love of God in every heart. Join our community and grow in faith together.</p>
+                </div>
+                <div class="col-lg-2 col-md-4 animate-on-scroll">
+                    <h5 class="footer-heading mb-4">Quick Links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#service">Schedules</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 animate-on-scroll">
+                    <h5 class="footer-heading mb-4">Contact Us</h5>
+                    <ul class="list-unstyled footer-contact">
+                        <li>
+                            <i class="bi bi-geo-alt"></i>
+                            Sotes St., Brgy. Poblacion 6009 Tabuelan Cebu
+                        </li>
+                        <li class="mt-2">
+                            <i class="bi bi-telephone"></i>
+                            0948 610 0650
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-4 animate-on-scroll">
+                    <h5 class="footer-heading mb-4">Follow Us</h5>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/share/1M6QUF7ddM/" target="_blank" class="social-icon">
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider my-5">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <p class="copyright mb-0">&copy; 2026 Tabuelan Bible Baptist. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Home Section -->
+<section id="home">
+    <div class="container d-flex justify-content-center">
+        <div class="hero-content">
+            <p>Faith • Community • Purpose</p>
+            <img src="{{ url_for('static', filename='images/headertext.png') }}" alt="Praise and Worship" class="hero-header-img">
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <a href="#service" class="btn btn-clean">Join Our Service</a>
+                <a href="#about" class="btn btn-outline-gradient">About Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Join Us Section (Inspired by joininspo.PNG) -->
+<section id="join-us">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="join-content mb-0" style="border-left: 4px solid transparent; border-image: var(--brand-gradient); border-image-slice: 1; padding-left: 40px;">
+                    <h2 class="join-title">Join Our Community</h2>
+                    <p class="join-description">Discover a place where you belong. We are more than just a church; we are a family committed to growing in faith and serving our city together.</p>
+                    <a href="#service" class="btn btn-clean mt-4">View Schedule</a>
+                </div>
+            </div>
+            <div class="col-lg-6 animate-on-scroll">
+                <div class="join-image-container">
+                    <div class="join-image-overlay"></div>
+                    <img src="{{ url_for('static', filename='images/church.jpg') }}" alt="Our Church" class="join-image-img">
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Info Containers -->
+        <div class="row g-4 animate-on-scroll">
+            <div class="col-md-4">
+                <div class="contact-box">
+                    <img src="{{ url_for('static', filename='images/icon/location.png') }}" alt="Location Icon" class="contact-icon-img">
+                    <h5>Location</h5>
+                    <p>Sotes St., Brgy. Poblacion 6009 Tabuelan Cebu</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-box">
+                    <img src="{{ url_for('static', filename='images/icon/phone.png') }}" alt="Phone Icon" class="contact-icon-img">
+                    <h5>Phone Number</h5>
+                    <p>0948 610 0650</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="contact-box">
+                    <img src="{{ url_for('static', filename='images/icon/facebook.png') }}" alt="Facebook Icon" class="contact-icon-img">
+                    <h5>Facebook</h5>
+                    <a href="https://www.facebook.com/share/1M6QUF7ddM/" target="_blank">Tabuelan Bible Baptist</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <div class="container animate-on-scroll">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <span class="section-tag">About Us</span>
+                <h2 class="section-title">Our Vision & Mission</h2>
+                <div class="about-text">
+                    <p class="mb-4">Welcome to our church! We are a community dedicated to spreading the light and love of God in every heart. Our mission is to foster a spiritual environment where everyone can grow in faith and find their purpose.</p>
+                    <p>We believe in the power of prayer and the strength of a united community. Join us as we journey together in faith, hope, and love.</p>
+                </div>
+            </div>
+            <div class="col-lg-5 offset-lg-1">
+                <div class="pastor-profile">
+                    <img src="{{ url_for('static', filename='images/founders.jpg') }}" alt="Pastor Joey Dence and Wife Liezel Dence" class="pastor-image shadow">
+                    <div class="pastor-info">
+                        <h4 class="mb-1">Pastor Joey Dence</h4>
+                        <p class="text-muted mb-0">& Pastor's Wife Liezel Dence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Gallery Section (Horizontal Slider) -->
+<section id="gallery">
+    <div class="container animate-on-scroll">
+        <div class="text-center mb-5">
+            <span class="section-tag">Moments</span>
+            <h2 class="section-title">Church Gallery</h2>
+        </div>
+        
+        <div class="gallery-slider-container">
+            <div class="gallery-wrapper" id="galleryWrapper">
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/100.jpg') }}" alt="Gallery 1">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/101.jpg') }}" alt="Gallery 2">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/102.jpg') }}" alt="Gallery 3">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/103.jpg') }}" alt="Gallery 4">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/104.jpg') }}" alt="Gallery 5">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/105.jpg') }}" alt="Gallery 6">
+                </div>
+                <div class="gallery-slide">
+                    <img src="{{ url_for('static', filename='images/gallery/106.jpg') }}" alt="Gallery 7">
+                </div>
+            </div>
+            
+            <div class="slider-nav">
+                <button class="btn-nav" id="prevBtn" title="Previous">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+                    </svg>
+                </button>
+                <button class="btn-nav" id="nextBtn" title="Next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Service Section -->
+<section id="service">
+    <div class="container animate-on-scroll">
+        <div class="text-center mb-5">
+            <span class="section-tag">Join Us</span>
+            <h2 class="section-title">Service Schedule</h2>
+        </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-3">
+                <div class="service-card shadow-sm text-center">
+                    <span class="service-time">Sunday Morning</span>
+                    <h4 class="fw-bold mb-3">Worship Service</h4>
+                    <p class="text-muted">9:00 AM - 10:00 AM</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card shadow-sm text-center">
+                    <span class="service-time">Sunday Afternoon</span>
+                    <h4 class="fw-bold mb-3">Afternoon Service</h4>
+                    <p class="text-muted">4:30 PM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card shadow-sm text-center">
+                    <span class="service-time">Sunday</span>
+                    <h4 class="fw-bold mb-3">Young People's Time</h4>
+                    <p class="text-muted">2:00 PM - 3:00 PM</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="service-card shadow-sm text-center">
+                    <span class="service-time">Wednesday</span>
+                    <h4 class="fw-bold mb-3">Midweek Service</h4>
+                    <p class="text-muted">4:00 PM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
