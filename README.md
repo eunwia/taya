@@ -41,7 +41,7 @@
 
 ## 🛠️ Tech Stack
 
-<div align="center">
+<div>
 
 ![HTML5](https://img.shields.io/badge/HTML5-4a7c59?style=for-the-badge&logo=html5&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/CSS3-6a9e77?style=for-the-badge&logo=css3&logoColor=ffffff)
