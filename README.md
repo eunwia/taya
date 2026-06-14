@@ -1,4 +1,7 @@
 <div align="center">
+
+<img src="readme/taya-text.png" alt="Tabuelan Bible Baptist Church" width="400" />
+
 # Tabuelan Bible Baptist Church
 ![Ministry Website](https://img.shields.io/badge/Ministry-Website-4a7c59?style=for-the-badge)
 ![TAYP](https://img.shields.io/badge/TAYP-Youth%20Ministry-6a9e77?style=for-the-badge)
