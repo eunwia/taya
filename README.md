@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="readme/taya-text.png" alt="Tabuelan Bible Baptist Church" width="400" />
+<img src="readme/taya-text.png" alt="Tabuelan Bible Baptist Church" width="200" />
 
 # Tabuelan Bible Baptist Church
 ![Ministry Website](https://img.shields.io/badge/Ministry-Website-4a7c59?style=for-the-badge)
